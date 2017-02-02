@@ -1,0 +1,118 @@
+// This function is from a happy glittery unicorn.
+$.each_ordered=function(object,callback){
+  var keys=[];
+  for(property in object)
+    keys.push(property);
+  keys.sort().reverse();
+  for(var i=0;i<keys.length;i++)
+    callback.apply(object[keys[i]],[keys[i]]);
+}
+
+RNS=function(url, tidm){
+  this.tidm = tidm;
+  this.url = url;
+  this.month_names = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+}
+
+RNS.prototype = {
+  get_month_name:function(i) {
+    return this.month_names[parseInt(i, 10)-1];
+  },
+  ajax:function(data, callback){
+    $.ajax({
+      url: this.url,
+      data: data + "&customer_key=" + this.tidm,
+      dataType: "jsonp",
+      success:function(data) {
+        callback(data);
+      }
+    }); 
+    return this;
+  },
+  get_last_months:function(months, callback){
+    this.ajax("months=" + months, function(data) {
+      callback(data);
+    });
+    return this;
+  },
+  get_by_keywords:function(keywords, callback){
+    this.ajax("terms=" + keywords, function(data) {
+      callback(data);
+    });
+    return this;
+  },
+  get_by_date:function(begin, end, callback){
+    this.ajax("start=" + begin + "&end=" + end, function(data) {
+      callback(data);
+    });
+    return this;
+  },
+  get_by_count:function(count, callback){
+    this.ajax("start=0&count=" + count, function(data) {
+      callback(data);
+    });    
+    return this;
+  },
+  output_small:function(data, callback) { 
+      var containers = $('#rns_small');
+  
+      $('li', containers).remove();
+      
+      $.each_ordered(data,function(year){
+        // DOM output for each year.
+        $.each_ordered(this,function(month){
+          // DOM output for each month.
+            $.each_ordered(this,function(day){
+              // DOM output for day. 
+              $.each_ordered(this,function(time){
+                $.each(this, function() {
+                    var html = '<li>\
+                                <h5 class="update-title">\
+                                    <a href="/index.php?cID=287&id='+this.id+'" target="_blank">'+this.headline+'</a>\
+                                    <span class="update-meta">'+this.code+' - ' +day+ '/' +month+ '/' +year+ ' ' + time +'</span>\
+                                </h5>\
+                            </li>';
+                  containers.append($(html).clone());
+                });
+              });
+            });
+        });
+      });
+  
+    
+     callback(this);
+    
+     return this;
+    },
+  output_large:function(data, callback) {
+    
+      var containers = $('#rnsgo');
+ 
+      $.each_ordered(data,function(year){
+        // DOM output for each year.
+        $.each_ordered(this,function(month){
+          // DOM output for each month.
+            $(containers).append('<div class="the-counter" data-rns="">\
+                  <div class="news-item-head"><h2 class="news-item-title">'+window.rns.get_month_name(month)+ ' '+year+'</h2></div>\
+                  <div class="news-item-body"><ol class="list-news"></ol></div></div>');
+            $.each_ordered(this,function(day){
+              // DOM output for day. 
+              $.each_ordered(this,function(time){
+                $.each(this, function() {
+                    var html = '<li><a href="/index.php?cID=287&id='+this.id+'" target="_blank">\
+                                <span>' +day+ '/' +month+ '/' +year+ ' ' + time +'</span>\
+                                <strong>'+this.headline+'</strong>\
+                                <em>Read News Post</em></a></li>';
+                  $('.list-news:last').append($(html).clone());
+                });
+              });
+            });
+        });
+      });
+  
+    
+     callback(this);
+    
+     return this;
+    },
+}

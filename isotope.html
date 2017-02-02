@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Pictures of Trevyr Barn, a luxury holiday cottage in South Wales." />
+<meta name="keywords" content="Holiday cottage, holiday accommodation, holiday, vacation, Wales, South Wales, Welsh mountains, Monmouthshire, Monmouth, Grosmont, Abergavenny, Skenfrith, Three Castles Walk, Offa's Dyke Walk, Brecon Beacons, Black Mountains " />
+<meta name="author" content="">
+<title>Trevyr Barn: Pictures of the barn and local area</title>
+<META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+<!-- Bootstrap Core CSS -->
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link href="css/app.css" rel="stylesheet">
+<link href="css/fonts.css" rel="stylesheet">
+<link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ >
+<!-- Fonts -->
+
+<link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.12.1.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/app.js"></script>
+<script src="https://unpkg.com/isotope-layout@3.0/dist/isotope.pkgd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.min.js"></script>
+<style type="text/css">
+
+</style>
+</head>
+<body ng-app="trevyrApp">
+<gtm></gtm>
+<header></header>
+
+<!-- Navigation -->
+
+<navinclude></navinclude>
+  <main class="main">
+    <section class="main-head">
+      <div class="row">
+        <div class="medium-12 column page-header-title">
+          <h1>Sonora Lithium Gallery</h1>
+        </div>
+        <!-- /.medium-12 column --> 
+      </div>
+      <!-- /.row --> 
+    </section>
+    <!-- /.main-head -->
+    
+    <section class="main-body">
+      <div class="row">
+        <div class="medium-12 columns">
+          <div class="content">
+              <div id="filters" class="enable">  
+    <select id="filter-list">    
+        <option value="*">Select Gallery:  All Images</option>
+        <option value=".SonoraLithium">Sonora Lithium</option>
+            <option value=".Sonora">Sonora</option>       <!-- <option value=".one">Select Gallery:</font>  Class one images</option>
+        <option value=".two">Select Gallery:  Class two images</option> -->
+    </select>    
+  </div>
+<div class="moreImages" style="display:none;">  
+                <div class="grid-item " id="file_169"> 
+          <a href="./LiveGallery_files/MG_9815-opt.jpg" class="gallery" rel="gallery" title="">
+            <img src="./LiveGallery_files/MG_9815-opt.jpg">
+          </a>
+          <div class="caption">
+            <p></p>
+          </div>
+        </div>      
+  
+      </div><div class="grid" style="position: relative; height: 510.188px;"><div class="grid-sizer"></div><div class="gutter-sizer"></div>
+                  <div class="grid-item SonoraLithium" id="file_168" style="position: absolute; left: 0%; top: 0px;"> 
+          <a href="./LiveGallery_files/MG_9810-opt.jpg" class="gallery" rel="gallery" title="">
+            <img src="./LiveGallery_files/MG_9810-opt.jpg">
+          </a>
+          <div class="caption">
+            <p></p>
+          </div>
+        </div>      
+  
+                
+                    <div class="grid-item Sonora" id="file_170" style="position: absolute; left: 25.9424%; top: 0px; background-color: rgb(0, 0, 0);"> 
+          <a href="./LiveGallery_files/MG_9822-opt.jpg" class="gallery" rel="gallery" title="">
+            <img src="./LiveGallery_files/MG_9822-opt.jpg">
+          </a>
+          <div class="caption">
+            <p style="display: none;"></p>
+          </div>
+        </div>      
+  
+                
+                    <div class="grid-item Sonora" id="file_171" style="position: absolute; left: 51.9573%; top: 0px; background-color: rgb(0, 0, 0);"> 
+          <a href="./LiveGallery_files/MG_9827-opt.jpg" class="gallery" rel="gallery" title="">
+            <img src="./LiveGallery_files/MG_9827-opt.jpg">
+          </a>
+          <div class="caption">
+            <p style="display: none;"></p>
+          </div>
+        </div>      
+  
+                
+                    <div class="grid-item Sonora" id="file_172" style="position: absolute; left: 77.9721%; top: 0px; background-color: rgb(0, 0, 0);"> 
+          <a href="./LiveGallery_files/IMG_0977-opt.jpg" class="gallery" rel="gallery" title="">
+            <img src="./LiveGallery_files/IMG_0977-opt.jpg">
+          </a>
+          <div class="caption">
+            <p style="display: block;"></p>
+          </div>
+        </div>      
+  
+                
+      
+</div>  
+<div id="loadMoreButton">Load more</div>
+
+    
+          </div>
+          
+          <!-- /.content --> 
+        </div>
+        <!-- /.medium-8 columns --> 
+        
+        <!-- /.medium-4 columns --> 
+      </div>
+      <!-- /.row --> 
+    </section>
+    <!-- /.main-body --> 
+    
+  </main> 
+
+
+<footerinclude></footerinclude>
+<!-- Script to Activate the Carousel --> 
+<script>
+
+  // init Isotope
+  var $container = $('.isotope').isotope({
+    itemSelector: '.element-item',
+    layoutMode: 'fitRows',
+    getSortData: {
+      name: '.name',
+      symbol: '.symbol',
+      number: '.number parseInt',
+      category: '[data-category]',
+      weight: function(itemElem) {
+        var weight = $(itemElem).find('.weight').text();
+        return parseFloat(weight.replace(/[\(\)]/g, ''));
+      }
+    }
+  });
+
+  // filter functions
+  var filterFns = {
+    // show if number is greater than 50
+    numberGreaterThan50: function() {
+      var number = $(this).find('.number').text();
+      return parseInt(number, 10) > 50;
+    },
+    // show if name ends with -ium
+    ium: function() {
+      var name = $(this).find('.name').text();
+      return name.match(/ium$/);
+    }
+  };
+
+  // bind filter button click
+  $('#filters').on('click', 'button', function() {
+    var filterValue = $(this).attr('data-filter');
+    // use filterFn if matches value
+    filterValue = filterFns[filterValue] || filterValue;
+    $container.isotope({
+      filter: filterValue
+    });
+  });
+
+  // bind sort button click
+  $('#sorts').on('click', 'button', function() {
+    var sortByValue = $(this).attr('data-sort-by');
+    $container.isotope({
+      sortBy: sortByValue
+    });
+  });
+
+  // change is-checked class on buttons
+  $('.button-group').each(function(i, buttonGroup) {
+    var $buttonGroup = $(buttonGroup);
+    $buttonGroup.on('click', 'button', function() {
+      $buttonGroup.find('.is-checked').removeClass('is-checked');
+      $(this).addClass('is-checked');
+    });
+  });
+
+  //****************************
+  // Isotope Load more button
+  //****************************
+  var initShow = 3; //number of items loaded on init & onclick load more button
+  var counter = initShow; //counter for load more button
+  var iso = $container.data('isotope'); // get Isotope instance
+
+  loadMore(initShow); //execute function onload
+
+  function loadMore(toShow) {
+    $container.find(".hidden").removeClass("hidden");
+
+    var hiddenElems = iso.filteredItems.slice(toShow, iso.filteredItems.length).map(function(item) {
+      return item.element;
+    });
+    $(hiddenElems).addClass('hidden');
+    $container.isotope('layout');
+
+    //when no more to load, hide show more button
+    if (hiddenElems.length == 0) {
+      jQuery("#load-more").hide();
+    } else {
+      jQuery("#load-more").show();
+    };
+
+  }
+
+  //append load more button
+  $container.after('<button id="load-more"> Load More</button>');
+
+  //when load more button clicked
+  $("#load-more").click(function() {
+    if ($('#filters').data('clicked')) {
+      //when filter button clicked, set initial value for counter
+      counter = initShow;
+      $('#filters').data('clicked', false);
+    } else {
+      counter = counter;
+    };
+
+    counter = counter + initShow;
+
+    loadMore(counter);
+  });
+
+  //when filter button clicked
+  $("#filters").click(function() {
+    $(this).data('clicked', true);
+
+    loadMore(initShow);
+  });
+
+  
+  
+
+    </script>
+
+</body>
+</html>

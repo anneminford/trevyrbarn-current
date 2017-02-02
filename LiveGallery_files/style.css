@@ -1,0 +1,146 @@
+
+
+/* GALLERY */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+/* isotope new stuff */
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+/* end isotope new stuff */
+
+/* Filter new stuff */
+#filters {
+    width: 22%;
+    float: right;
+    border-top: 3px solid #d6de23;
+}
+#filters select {
+    border:0;
+    background: #f1f1f1 url('http://www.rareearthmineralsplc.com/images/gallery/gallery-drop-arrow.png') no-repeat 90% center;
+    color: #595959;
+    font-size:14px;
+    font-family: 'Cuprumffu', sans-serif;
+    height:auto;
+    margin-bottom:30px;
+    padding:5px;
+    -moz-appearance: none;  
+    -webkit-appearance:none;
+}
+.disable {
+    display: none;
+}
+.enable {
+    display:block;
+}
+.grid {
+    clear:both;
+}
+
+/* END ISOTOPE NEW STUFF */
+.hide {
+    display:none;
+}
+#loadMoreButton {
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    background: #85bc3c;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    font-family: 'Cuprumffu', sans-serif;
+    font-size: 18px;
+    letter-spacing: 1.2px; /* NEW */
+}
+
+
+
+/* clearfix */
+.grid:after {
+ content: '';
+ display: block;
+ clear: both;
+}
+/* ---- grid-item ---- */
+.grid-sizer, .grid-item {
+    width: 22%;
+    margin-bottom:4%;
+}
+.gutter-sizer {
+    width: 4%;
+}
+
+.grid-item {
+  z-index: 2;
+}
+.grid-item img:hover {
+  opacity: 0.5;
+}
+
+div.caption {
+    background: transparent;
+    color: #fff;
+    position: absolute;
+    top: 44%; /* NEW */
+    text-align: center;
+    line-height: 100%;
+    z-index: -1;
+    width: 100%;
+}
+
+div.caption p {
+  text-align: center;
+  width:100%;
+  display: block;
+  font-family: 'Cuprumffu', sans-serif;
+  font-size:18px; /* NEW */
+}
+ /* NEW */
+@media 
+(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) { 
+   .customGallery .fancybox-prev span {
+    background: transparent url(images/arrow-prev@2x.png) no-repeat left;
+    background-size: 33px 62px;
+}
+    .customGallery .fancybox-next span {
+    background: transparent url(images/arrow-next@2x.png) no-repeat left;
+    background-size: 33px 62px;
+}
+    .customGallery .fancybox-close span {
+    background: url(images/arrow-back-to-gallery@2x.png) no-repeat left;
+    background-size: 12px 21px;
+}
+/* END NEW */
+}
+@media only screen 
+and (min-device-width : 641px) 
+and (max-device-width : 1024px)  {
+ .grid-sizer,  .grid-item {
+width: 48%;
+margin-bottom: 4%;
+}
+ .gutter-sizer {
+width: 4%;
+}
+#filters {width:48%;} /* NEW */
+}
+ @media only screen and (min-device-width : 320px) and (max-device-width : 640px) {
+ .grid-sizer,  .grid-item {
+width: 48%;
+margin-bottom: 4%;
+}
+ .gutter-sizer {
+width: 4%;
+}
+#filters {width:48%;} /* NEW */
+}
